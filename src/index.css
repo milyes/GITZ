@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-[#050505] text-[#e0e0e0] font-mono selection:bg-[#00ff41] selection:text-black;
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+.glass-panel {
+  @apply bg-[#0a0a0a]/80 backdrop-blur-md border border-[#333] rounded-sm;
+}
+
+.terminal-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+}
+
+.core-pulse {
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#333] hover:bg-[#444];
+}
